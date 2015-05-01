@@ -1,11 +1,16 @@
-<h1>$title$</h1>
-
 <div class="info">
     Publikováno $date$
     $if(author)$
         ($author$)
     $endif$
+    $if(tags)$
+        <span class="tags">
+            ($tags$)
+        </span>
+    $endif$
 </div>
+
+
 
 <p class="short">
 $short$

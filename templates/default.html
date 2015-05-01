@@ -14,11 +14,16 @@
             </div>
             <div id="navigation">
                 <a href="/blog.html">Blog</a>
+                <a href="/tags.html">Témata</a>
                 <a href="/">O mě</a>
             </div>
         </div>
 
         <div id="content">
+            $if(hidetitle)$ $else$
+            <h1>$title$</h1>
+            $endif$
+
             $body$
         </div>
         <div id="footer">
