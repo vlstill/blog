@@ -14,3 +14,13 @@ cabal.sandbox.config
 *.prof
 *.aux
 *.hp
+
+# vim
+*~
+*.swp
+*.swo
+
+# hakyll
+_site
+_cache
+
