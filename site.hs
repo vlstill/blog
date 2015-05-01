@@ -1,6 +1,9 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
+import           Data.Monoid
+import           Data.Maybe
+import qualified Data.Map as M
+import           Control.Applicative
 import           Hakyll
 
 
@@ -13,7 +16,7 @@ main = hakyll $ do
 
     match "css/*" $ do
         route   idRoute
-        compile compressCssCompiler
+        compile copyFileCompiler
 
     match "about.md" $ do
         route   $ setExtension "html"
@@ -28,25 +31,25 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
-    create ["archive.html"] $ do
+    create ["blog.html"] $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
-            let archiveCtx =
+            let blogCtx =
                     listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Archives"            `mappend`
+                    constField "title" "Blog"                `mappend`
                     defaultContext
 
             makeItem ""
-                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+                >>= loadAndApplyTemplate "templates/blog.html" blogCtx
+                >>= loadAndApplyTemplate "templates/default.html" blogCtx
                 >>= relativizeUrls
 
 
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            posts <- fmap (take 8) . recentFirst =<< loadAll "posts/*"
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Home"                `mappend`
@@ -57,11 +60,36 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
+    create ["atom.xml"] $ feedRule renderAtom
+    create ["rss.xml"]  $ feedRule renderRss
+
     match "templates/*" $ compile templateCompiler
 
 
 --------------------------------------------------------------------------------
+feedRule :: (FeedConfiguration -> Context String -> [Item String] -> Compiler (Item String)) -> Rules ()
+feedRule render = do
+    route idRoute
+    compile $ do
+        posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
+        render feedConfig feedCtx posts
+
 postCtx :: Context String
 postCtx =
     dateField "date" "%-d. %-m. %Y" `mappend`
     defaultContext
+
+feedCtx :: Context String
+feedCtx = postCtx <> (field "description" $ \item -> do
+            metadata <- getMetadata (itemIdentifier item)
+            return $ fromMaybe "" $ M.lookup "short" metadata)
+    
+
+feedConfig :: FeedConfiguration
+feedConfig = FeedConfiguration
+    { feedTitle       = "Vladimír Štill: blog"
+    , feedDescription = "blog"
+    , feedAuthorName  = "Vladimír Štill"
+    , feedAuthorEmail = "vl.still@gmail.com"
+    , feedRoot        = "https://paradise.fi.muni.cz/~xstill/blog.html"
+    }

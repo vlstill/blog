@@ -1,21 +1,31 @@
 body {
-    color: black;
-    font-size: 16px;
     margin: 0px auto 0px auto;
-    width: 600px;
+    padding: 0px 2em 0px 2em;
+    max-width: 50em;
+}
+
+@media ( max-width: 38em ), ( max-device-width: 38em ) {
+    body {
+        margin: 0px;
+        padding: 0px 1em 0px 1em;
+    }
+}
+
+a {
+    text-decoration: none;
 }
 
 div#header {
     border-bottom: 2px solid black;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
+    font-size: 115%;
+    font-weight: bold;
 }
 
 div#logo a {
-    color: black;
+    color: inherit;
     float: left;
-    font-size: 18px;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -24,10 +34,8 @@ div#header #navigation {
 }
 
 div#header #navigation a {
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 12px;
+    color: inherit;
+    margin-left: 1em;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -35,22 +43,31 @@ div#header #navigation a {
 div#footer {
     border-top: solid 2px black;
     color: #555;
-    font-size: 12px;
+    font-size: 75%;
     margin-top: 30px;
     padding: 12px 0px 12px 0px;
     text-align: right;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 150%;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 125%;
 }
 
 div.info {
     color: #555;
-    font-size: 14px;
+    font-size: 85%;
     font-style: italic;
+}
+
+div.blogpost {
+
+}
+
+div.blogpost a {
+    color: inherit;
+    text-decoration: none;
 }

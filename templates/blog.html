@@ -1,0 +1,14 @@
+$for(posts)$
+    <div class="blogpost">
+    <h1><a href="$url$">$title$</a></h1>
+        <div class="info">
+            Publikováno $date$
+            $if(author)$
+                ($author$)
+            $endif$
+        </div>
+        <p>
+        $short$
+        </p>
+    </div>
+$endfor$
