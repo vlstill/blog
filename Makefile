@@ -17,4 +17,4 @@ test : build
 	rsync -avc --del --progress _site/ antea:public_html/staging
 
 deploy : build
-	rsync -avc --del --progress _site/ antea:public_html
+	rsync -avc --del --progress _site/ antea:public_html --exclude tmp --exclude norway
