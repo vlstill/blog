@@ -1,10 +1,19 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
+
 import           Data.Monoid
 import           Data.Maybe
 import           Data.Ord
 import qualified Data.Map as M
+
+import           Data.Time.Clock
+import           Data.Time.Calendar
+import           Data.Time.LocalTime
+
+import           System.IO.Unsafe ( unsafePerformIO )
+
 import           Control.Applicative
+
 import           Hakyll
 
 
@@ -19,12 +28,6 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "about.md" $ do
-        route   $ setExtension "html"
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
-            >>= relativizeUrls
-
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
     tagsRules tags $ \tag pattern -> do
@@ -34,7 +37,7 @@ main = hakyll $ do
             posts <- recentFirst =<< loadAll pattern
             let ctx = constField "title" title
                       `mappend` listField "posts" postCtx (return posts)
-                      `mappend` defaultContext
+                      `mappend` defContext
             makeItem ""
                 >>= loadAndApplyTemplate "templates/blog.html" ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
@@ -42,7 +45,7 @@ main = hakyll $ do
 
     create ["tags.html"] $ do
         route idRoute
-        let ctx = constField "title" "Témata" <> defaultContext
+        let ctx = constField "title" "Témata" <> defContext
         compile $ renderTags showTag concat (sortTagsBy (down $ comparing (length . snd)) tags)
             >>= makeItem . (\str -> "<ul>" ++ str ++ "</ul>")
             >>= loadAndApplyTemplate "templates/default.html" ctx
@@ -56,16 +59,15 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" ctx
             >>= relativizeUrls
 
-    create ["blog.html"] $ do
-        route idRoute
+    match "blog.md" $ do
+        route $ setExtension "html"
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
             let blogCtx =
                     listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Blog"                `mappend`
-                    defaultContext
+                    defContext
 
-            makeItem ""
+            pandocCompiler
                 >>= loadAndApplyTemplate "templates/blog.html" blogCtx
                 >>= loadAndApplyTemplate "templates/default.html" blogCtx
                 >>= relativizeUrls
@@ -79,7 +81,7 @@ main = hakyll $ do
                     listField "posts" postCtx (return posts) <>
                     constField "title" "Home"                <>
                     constField "hidetitle" "hile"            <>
-                    defaultContext
+                    defContext
 
             getResourceBody
                 >>= applyAsTemplate indexCtx
@@ -106,7 +108,7 @@ feedRule render = do
 postCtx :: Context String
 postCtx =
     dateField "date" "%-d. %-m. %Y" `mappend`
-    defaultContext
+    defContext
 
 postCtxWithTags :: Tags -> Context String
 postCtxWithTags tags = tagsField "tags" tags `mappend` postCtx
@@ -115,7 +117,14 @@ feedCtx :: Context String
 feedCtx = postCtx <> (field "description" $ \item -> do
             metadata <- getMetadata (itemIdentifier item)
             return $ fromMaybe "" $ M.lookup "short" metadata)
-    
+
+defContext :: Context String
+defContext = constField "years" years <> defaultContext
+  where
+    (year, _, _) = toGregorian $ localDay timestamp
+    years = if year == firstyear then show firstyear
+                                 else show firstyear ++ " – " ++ show year
+    firstyear = 2015
 
 feedConfig :: FeedConfiguration
 feedConfig = FeedConfiguration
@@ -130,4 +139,11 @@ down :: (a -> a -> Ordering) -> a -> a -> Ordering
 down cmp a b = case cmp a b of
                   EQ -> EQ
                   LT -> GT
-                  GT -> LT       
+                  GT -> LT
+
+
+timestamp :: LocalTime
+timestamp = unsafePerformIO $ do
+    now <- getCurrentTime
+    timezone <- getCurrentTimeZone
+    return $ utcToLocalTime timezone now
