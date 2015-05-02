@@ -18,3 +18,6 @@ test : build
 
 deploy : build
 	rsync -avc --del --progress _site/ antea:public_html --exclude tmp --exclude norway --exclude staging
+
+run : deploy
+	-nohup firefox https://paradise.fi.muni.cz/~xstill < /dev/null > /dev/null 2> /dev/null &
