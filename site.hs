@@ -132,7 +132,7 @@ feedConfig = FeedConfiguration
     , feedDescription = "blog"
     , feedAuthorName  = "Vladimír Štill"
     , feedAuthorEmail = "vl.still@gmail.com"
-    , feedRoot        = "https://paradise.fi.muni.cz/~xstill/blog.html"
+    , feedRoot        = "https://paradise.fi.muni.cz/~xstill"
     }
 
 down :: (a -> a -> Ordering) -> a -> a -> Ordering
