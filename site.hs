@@ -55,7 +55,7 @@ main = hakyll $ do
     match "posts/*" $ do
         route $ setExtension "html"
         let ctx = postCtxWithTags tags
-        compile $ pandocCompiler
+        compile $ pandocTemplateCompiler ctx
             >>= loadAndApplyTemplate "templates/post.html"    ctx
             >>= loadAndApplyTemplate "templates/default.html" ctx
             >>= relativizeUrls
@@ -68,7 +68,7 @@ main = hakyll $ do
                     listField "posts" postCtx (return posts) `mappend`
                     defContext
 
-            pandocCompiler
+            pandocTemplateCompiler blogCtx
                 >>= loadAndApplyTemplate "templates/blog.html" blogCtx
                 >>= loadAndApplyTemplate "templates/default.html" blogCtx
                 >>= relativizeUrls
@@ -126,6 +126,10 @@ defContext = constField "years" years <> defaultContext
     years = if year == firstyear then show firstyear
                                  else show firstyear ++ " – " ++ show year
     firstyear = 2015
+
+-- | compile pandoc, but apply it (on itself) as template first
+pandocTemplateCompiler :: Context String -> Compiler (Item String)
+pandocTemplateCompiler ctx = getResourceBody >>= fmap renderPandoc . applyAsTemplate ctx
 
 feedConfig :: FeedConfiguration
 feedConfig = FeedConfiguration
