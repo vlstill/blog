@@ -4,6 +4,7 @@
 import           Data.Monoid
 import           Data.Maybe
 import           Data.Ord
+import           Data.Char
 import qualified Data.Map as M
 
 import           Data.Time.Clock
@@ -32,7 +33,7 @@ main = hakyll $ do
 
     tagsRules tags $ \tag pattern -> do
         let title = "Téma: " ++ tag ++ ""
-        route idRoute
+        route (customRoute $ ident . toFilePath) -- idRoute
         compile $ do
             posts <- recentFirst =<< loadAll pattern
             let ctx = constField "title" title
@@ -134,6 +135,18 @@ feedConfig = FeedConfiguration
     , feedAuthorEmail = "vl.still@gmail.com"
     , feedRoot        = "https://paradise.fi.muni.cz/~xstill"
     }
+
+ident :: String -> String
+ident = map (\x -> fromMaybe x (x `M.lookup` tr)) . map toLower
+  where
+    tr :: M.Map Char Char
+    tr = M.fromList
+        [ (' ', '-'), ('\n', '-'), ('*', '-'), ('\t', '-')
+        , ('ě', 'e'), ('š', 's'), ('č', 'c'), ('ř', 'r'), ('ž', 'z')
+        , ('ý', 'y'), ('á', 'a'), ('í', 'i'), ('é', 'e'), ('ú', 'u')
+        , ('ů', 'u'), ('ó', 'o')
+        , (',', '-'), (';', '-')
+        ]
 
 down :: (a -> a -> Ordering) -> a -> a -> Ordering
 down cmp a b = case cmp a b of
