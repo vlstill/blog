@@ -74,8 +74,8 @@ main = hakyll $ do
                 >>= relativizeUrls
 
 
-    match "index.html" $ do
-        route idRoute
+    match "index.md" $ do
+        route $ setExtension "html"
         compile $ do
             posts <- fmap (take 8) . recentFirst =<< loadAll "posts/*"
             let indexCtx =
@@ -84,8 +84,7 @@ main = hakyll $ do
                     constField "hidetitle" "hile"            <>
                     defContext
 
-            getResourceBody
-                >>= applyAsTemplate indexCtx
+            pandocTemplateCompiler indexCtx
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
