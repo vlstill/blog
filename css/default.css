@@ -7,11 +7,18 @@ body {
 
 pre, tt, code { font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', mono; }
 
-@media ( max-width: 38em ), ( max-device-width: 38em ) {
+@media ( max-width: 40em ), ( max-device-width: 40em ) {
     body {
         margin: 0px;
         padding: 0px 1em 0px 1em;
         max-width: none;
+    }
+}
+
+@media ( max-width: 28em ), ( max-device-width: 28em ) {
+    body {
+        margin: 0px;
+        padding: 0px 0.5em 0px 0.5em;
     }
 }
 
