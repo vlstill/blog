@@ -1,0 +1,145 @@
+/* Loading Image */
+div.gallerie-loading {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 126px;
+	height: 22px;
+	margin: auto;
+	z-index: 10000;
+	background: url("loading.gif");
+}
+
+/* Image Index and Title Text */
+.gallerie-text {
+	max-width: 60%;
+	min-width: 400px;
+	margin: 0px 10px;
+	vertical-align: bottom;
+}
+
+.gallerie-text div {
+	width: 100%;
+	text-overflow: ellipsis;
+}
+
+/* Image Title Text */
+.gallerie-title {
+	
+}
+
+/* Image Index */
+.gallerie-index {
+	
+}
+
+/* Gallerie Controls */
+.gallerie-control {
+	font-size: 20px;
+	min-width: 28px;
+	min-height: 28px;
+	padding: 5px;
+	margin: 0px;
+	border: 2px solid transparent;
+	vertical-align: top;
+	
+	border-radius: 100%;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	transition: all 500ms;
+		-webkit-transition: all 500ms;
+		-moz-transition: all 500ms;
+		-ms-transition: all 500ms;
+		-o-transition: all 500ms;
+}
+
+.gallerie-control:hover {
+	background: #222;
+	border: 2px solid white;
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+.gallerie-control-previous{
+	
+}
+
+.gallerie-control-next {
+}
+
+/* Gallery Overlay */
+.gallerie-overlay {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0.9);
+	z-index: 1000;
+}
+
+/* Image Box Container */
+.gallerie-imagebox {
+	width: 100%;
+	height: 70%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	margin: 10px 0px;
+}
+
+.gallerie-imagebox img {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	border: 4px solid white;
+	border-radius: 5px;
+}
+
+.gallerie-imagebox:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+/* Caption Box Container */
+.gallerie-captionbox {
+	color: white;
+	width: 100%;
+	height: 50px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	padding: 5px 0px 15px 0px;
+}
+
+.gallerie-captionbox:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.gallerie-captionbox > div {
+	display: inline-block;
+}
+
+/* Thumb Box Container */
+.gallerie-thumbbox {
+    display: none;
+}

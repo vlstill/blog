@@ -47,6 +47,10 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "script/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
     tagsRules tags $ \tag pattern -> do

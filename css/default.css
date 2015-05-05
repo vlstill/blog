@@ -71,3 +71,19 @@ div.info {
 div.blogpost {
 
 }
+
+div#gallery {
+    text-align: justify;
+}
+
+div#gallery a {
+    display: inline-block;
+    width: 250px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+div#gallery .fill {
+    display: inline-block;
+    width: 250px;
+}
