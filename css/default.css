@@ -3,6 +3,7 @@ body {
     margin: 0px auto 0px auto;
     padding: 0px 2em 0px 2em;
     max-width: 50em;
+    text-align: justify;
 }
 
 pre, tt, code { font-family: 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', mono; }
@@ -80,17 +81,12 @@ div.blogpost {
 }
 
 div#gallery {
-    text-align: justify;
+    text-align: left;
 }
 
 div#gallery a {
     display: inline-block;
     width: 250px;
-    margin-bottom: 4px;
+    margin: 4px;
     text-align: center;
-}
-
-div#gallery .fill {
-    display: inline-block;
-    width: 250px;
 }
