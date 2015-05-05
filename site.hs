@@ -9,6 +9,7 @@ import           Data.Maybe
 import           Data.Ord
 import           Data.Char
 import qualified Data.Map as M
+import           Data.List
 
 import           Data.Time.Clock
 import           Data.Time.Calendar
@@ -31,9 +32,7 @@ import           Hakyll
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
-    match "images/*/meta" $ do
-        route   idRoute
-        compile imgMetaCompiler
+    match "images/*/meta" $ compile imgMetaCompiler
 
     match "images/*/*.*" $ do
         route   idRoute
@@ -79,7 +78,7 @@ main = hakyll $ do
                 imgbase = ("images" </>) . takeBaseName $ path
                 imgpat = fromGlob . (</> "*.*") $ imgbase
                 metapat = fromList . (: []) . fromFilePath . (</> "meta") $ imgbase
-            imgs <- loadAll (imgpat .&&. hasNoVersion)
+            imgs <- sortBy (comparing (toFilePath . itemIdentifier)) <$> loadAll (imgpat .&&. hasNoVersion)
             meta <- fromMaybe [] . fmap itemBody . head' <$> loadAllSnapshots metapat "metamap"
 
             let ctx = postCtx tags imgs meta
