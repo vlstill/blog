@@ -1,17 +1,14 @@
 $body$
 
+<div id="postlist">
 $for(posts)$
     <div class="blogpost">
     <h2><a href="$url$">$title$</a></h2>
-        <div class="info">
-            Publikováno $date$
-            $if(author)$
-                ($author$)
-            $endif$
-        </div>
+        $partial("templates/post-info.html")$
         <p>
         $short$
         </p>
         <a href="$url$">Pokračovat ve čtení…</a>
     </div>
 $endfor$
+</div>

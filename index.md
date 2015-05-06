@@ -49,7 +49,7 @@ Na mém blogu najdete mé postřehy ze života na fakultě i mimo ni. Několik
 nejnovějších příspěvků naleznete zde, zbytek [na stránce blogu](/blog.html).
 
 $for(posts)$
-*   [$title$]($url$) – $date$
+*   [$title$]($url$) – $date$ ($tags$)
 $endfor$
 
 Rovněž můžete navštívit můj starý
