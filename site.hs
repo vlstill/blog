@@ -56,6 +56,7 @@ main = hakyll $ do
         compile copyFileCompiler
 
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+    let postCtxBase = postCtxBase' tags
 
     tagsRules tags $ \tag pattern -> do
         let title = "Téma: " ++ tag ++ ""
@@ -123,8 +124,8 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
-    create ["atom.xml"] $ feedRule renderAtom
-    create ["rss.xml"]  $ feedRule renderRss
+    create ["atom.xml"] $ feedRule tags renderAtom
+    create ["rss.xml"]  $ feedRule tags renderRss
 
     match "templates/*" $ compile templateCompiler
 
@@ -133,22 +134,22 @@ main = hakyll $ do
                                   " (" ++ show count ++ ")</a></li>"
 
 --------------------------------------------------------------------------------
-feedRule :: (FeedConfiguration -> Context String -> [Item String] -> Compiler (Item String)) -> Rules ()
-feedRule render = do
+feedRule :: Tags -> (FeedConfiguration -> Context String -> [Item String] -> Compiler (Item String)) -> Rules ()
+feedRule tags render = do
     route idRoute
     compile $ do
         posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
-        render feedConfig feedCtx posts
+        render feedConfig (feedCtx tags) posts
 
-postCtxBase :: Context String
-postCtxBase =
-    dateField "date" "%-d. %-m. %Y" `mappend`
+postCtxBase' :: Tags -> Context String
+postCtxBase' tags =
+    dateField "date" "%-d. %-m. %Y" <>
+    tagsField "tags" tags <>
     defContext
 
 postCtx :: Tags -> [Item CopyFile] -> [ImgMeta] -> Context String
 postCtx tags imgs imgmeta = listField "images" imgCtx (return imgs) <>
-                            tagsField "tags" tags <>
-                            postCtxBase
+                            postCtxBase' tags
   where
     imgCtx = urlField "url" <>
              field "smallUrl" getSmallUrl <>
@@ -163,10 +164,12 @@ postCtx tags imgs imgmeta = listField "images" imgCtx (return imgs) <>
         | otherwise = findMeta' ms name
     getAlt item = return $ imgAlt (findMeta item)
 
-feedCtx :: Context String
-feedCtx = postCtxBase <> (field "description" $ \item -> do
-            metadata <- getMetadata (itemIdentifier item)
-            return $ fromMaybe "" $ M.lookup "short" metadata)
+feedCtx :: Tags -> Context String
+feedCtx tags = desc <> postCtxBase' tags
+  where
+    desc = field "description" $ \item -> do
+        metadata <- getMetadata (itemIdentifier item)
+        return $ fromMaybe "" $ M.lookup "short" metadata
 
 defContext :: Context String
 defContext = constField "years" years <> defaultContext
