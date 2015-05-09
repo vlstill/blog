@@ -77,7 +77,15 @@ div.info {
 }
 
 div.blogpost {
+    margin-bottom: 2em;
+}
 
+div.shortpostlist li {
+    margin: 1.5ex 0ex;
+}
+
+div.shortpostlist li p {
+    margin: 0.5ex 0ex;
 }
 
 div#gallery {

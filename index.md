@@ -48,9 +48,13 @@ My personal blog is written in Czech, sorry.
 Na mém blogu najdete mé postřehy ze života na fakultě i mimo ni. Několik
 nejnovějších příspěvků naleznete zde, zbytek [na stránce blogu](/blog.html).
 
+<div class="shortpostlist">
 $for(posts)$
 *   [$title$]($url$) – $date$ ($tags$)
+
+    $firstSentence$
 $endfor$
+</div>
 
 Rovněž můžete navštívit můj starý
 [blog o Erasmu v Norsku](https://paradise.fi.muni.cz/~xstill/norway/).
