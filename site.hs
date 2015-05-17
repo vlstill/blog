@@ -24,6 +24,7 @@ import           Data.ByteString.Lazy ( ByteString )
 import           System.IO.Unsafe ( unsafePerformIO )
 import           System.FilePath
 
+import           Control.Monad
 import           Control.Applicative
 import           Control.Arrow
 
@@ -81,7 +82,7 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" ctx
             >>= relativizeUrls
 
-    match "posts/*" $ do
+    forM_ ["posts/*", "extras/*"] $ \x -> match x $ do
         route $ setExtension "html"
         compile $ do
             path <- toFilePath <$> getUnderlying
