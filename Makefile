@@ -8,6 +8,8 @@ build : site
 site : site.hs blog.cabal .cabal-sandbox
 	cabal install
 	touch site
+
+rebuild : site
 	./site rebuild
 
 .cabal-sandbox :
