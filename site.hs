@@ -28,6 +28,8 @@ import           Control.Monad
 import           Control.Applicative
 import           Control.Arrow
 
+import           Text.Pandoc.Options
+
 import           Hakyll
 
 
@@ -190,7 +192,10 @@ defContext = constField "years" years <> defaultContext
 
 -- | compile pandoc, but apply it (on itself) as template first
 pandocTemplateCompiler :: Context String -> Compiler (Item String)
-pandocTemplateCompiler ctx = getResourceBody >>= fmap renderPandoc . applyAsTemplate ctx
+pandocTemplateCompiler ctx = getResourceBody >>= fmap render . applyAsTemplate ctx
+  where
+    render = renderPandocWith defaultHakyllReaderOptions
+        (defaultHakyllWriterOptions { writerHtml5 = True })
 
 data ImgMeta = ImgMeta { imgPattern :: String
                        , imgAlt :: String
