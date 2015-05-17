@@ -19,6 +19,7 @@ import           Data.Typeable ( Typeable )
 import           Data.Data ( Data )
 import           GHC.Generics ( Generic )
 import           Data.Binary
+import           Data.ByteString.Lazy ( ByteString )
 
 import           System.IO.Unsafe ( unsafePerformIO )
 import           System.FilePath
@@ -36,7 +37,8 @@ main = hakyll $ do
 
     match "images/*/*.*" $ do
         route   idRoute
-        compile copyFileCompiler
+        compile $ getResourceLBS
+            >>= withItemBody (unixFilterLBS "convert" [ "-", "-strip", "-resize", "1800x1800", "-quality", "94", "-" ])
 
     match "images/*/*.*" $ version "small" $ do
         route $ mapRoute (splitExtension >>> \(name, ext) -> (name ++ "-small") <.> ext)
@@ -141,13 +143,26 @@ feedRule tags render = do
         posts <- fmap (take 10) . recentFirst =<< loadAll "posts/*"
         render feedConfig (feedCtx tags) posts
 
+feedCtx :: Tags -> Context String
+feedCtx tags = desc <> postCtxBase' tags
+  where
+    desc = field "description" $ \item -> do
+        metadata <- getMetadata (itemIdentifier item)
+        return $ fromMaybe "" $ M.lookup "short" metadata
+
 postCtxBase' :: Tags -> Context String
 postCtxBase' tags =
     dateField "date" "%-d. %-m. %Y" <>
     tagsField "tags" tags <>
+    field "firstSentence" extractFirstSentence <>
     defContext
+  where
+    extractFirstSentence :: Item String -> Compiler String
+    extractFirstSentence item = do
+        meta <- getMetadata (itemIdentifier item)
+        return $ maybe "" (takeWhile (/= '.') >>> (++ "…")) $ M.lookup "short" meta
 
-postCtx :: Tags -> [Item CopyFile] -> [ImgMeta] -> Context String
+postCtx :: Tags -> [Item ByteString] -> [ImgMeta] -> Context String
 postCtx tags imgs imgmeta = listField "images" imgCtx (return imgs) <>
                             postCtxBase' tags
   where
@@ -163,13 +178,6 @@ postCtx tags imgs imgmeta = listField "images" imgCtx (return imgs) <>
         | fromGlob (imgPattern m) `matches` fromFilePath name = m
         | otherwise = findMeta' ms name
     getAlt item = return $ imgAlt (findMeta item)
-
-feedCtx :: Tags -> Context String
-feedCtx tags = desc <> postCtxBase' tags
-  where
-    desc = field "description" $ \item -> do
-        metadata <- getMetadata (itemIdentifier item)
-        return $ fromMaybe "" $ M.lookup "short" metadata
 
 defContext :: Context String
 defContext = constField "years" years <> defaultContext
