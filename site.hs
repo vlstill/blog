@@ -192,7 +192,7 @@ defContext = constField "years" years <> defaultContext
 
 -- | compile pandoc, but apply it (on itself) as template first
 pandocTemplateCompiler :: Context String -> Compiler (Item String)
-pandocTemplateCompiler ctx = getResourceBody >>= fmap render . applyAsTemplate ctx
+pandocTemplateCompiler ctx = getResourceBody >>= applyAsTemplate ctx >>= render
   where
     render = renderPandocWith defaultHakyllReaderOptions
         (defaultHakyllWriterOptions { writerHtml5 = True })
