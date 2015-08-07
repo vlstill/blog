@@ -4,7 +4,7 @@ tags: Slovinsko, Alpy, hory, cestování, foto
 short: Minulý týden jsem si vyzkoušel, jaké to je jen s pomocí vlastních nohou
        objevovat krásy hor a s krosnou na zádech se dostat do míst, kde neproudí
        davy turistů. S Karlem a Evou jsme totiž vyrazili do Triglavského
-       národního parku ve Slovinských Julských Alpách, kde jsme podnikly
+       národního parku ve Slovinských Julských Alpách, kde jsme podnikli
        třídenní přechod těchto krásných hor.
 ---
 
@@ -13,17 +13,17 @@ nepříjemně, proto jsme se rozhodli nakonec odjezd odložit na středu.  Vyraz
 jsme tedy směrem Kranjska Gora, někde za tímto severoslovinským městem se měl
 nacházet kemp, kde jsme chtěli přenocovat. Cestou jsme si ještě užili na
 Rakousko -- Slovinských hranicích pěkné serpentiny a stoupání i klesání. Náš
-první pokus o nalezení kempu byl neúspěšný, na místě de OpenStreeMaps
-tvrdošíjně ukazovali kemp jsme našli pětihvězdičkový honosný hotel, a v něm
+první pokus o nalezení kempu byl neúspěšný, na místě kde OpenStreeMaps
+tvrdošíjně ukazovaly kemp, jsme našli pětihvězdičkový honosný hotel a v něm
 ochotnou recepční, která nám oznámila, že kemp tu bohužel již tak deset let
 neexistuje. Pokračovali jsme tedy ještě pár kilometrů dále a ubytovali se v
 kempu u obce Dovje, kemp byl vcelku pěkný, stál asi 7 € na osobu a dokonce měl i
-přístřešek kde se dalo vařit, což se nám hodilo protože nedlouho po našem
+přístřešek kde se dalo vařit, což se nám hodilo, protože nedlouho po našem
 příjezdu a postavení stanu začalo pršet.
 
 ## Čtvrtek: přechod Vršiče
 
-Druhý den jsme si přispali, protože předpověď počasí na dopoledne nebyl zrovna
+Druhý den jsme si přispali, protože předpověď počasí na dopoledne nebyla zrovna
 nejpříznivější zatímco odpoledne mělo být o poznání lepší. Také poslední
 příprava krosen nám zabrala docela dost času, takže jsme se na cestu vydali až
 po poledni. Auto jsme nakonec nechali na parkovišti před infocentrem v Kranjské
@@ -38,7 +38,7 @@ cíli, průsmyku pod horou Vršič. Vrcholky byly stále v mracích, ale doufali
 že se stihnou rozplynout než dorazíme nahoru, přeci jen, měli jsme zdolat
 převýšení nějakých tisíc metrů, to dávalo mrakům docela čas. Cesta nahoru vedla
 nejprve kolem řeky Pišnica, místy i jejím, nyní téměř prázdným, korytem, později
-se odklonila a stoupala prudčeji nahoru. Mraky se bohužel nerozešli, takže náš
+se odklonila a stoupala prudčeji nahoru. Mraky se bohužel nerozešly, takže náš
 výhled nebyl zdaleka ideální, ale i tak stál výstup za to. Nahoře byl mlžný
 horský les, docela chladno a ne moc k vidění. Na vrcholu jsme se tedy trochu
 osvěžili a pokračovali dále, na plánu byl sestup do údolí na druhé straně,
@@ -53,12 +53,13 @@ asi pět štípanců do nohou. Naštěstí však na vosy nemám žádnou velkou 
 těch štípanců mi natekl jen jediný a to ještě ne moc.
 
 Po návratu na Vršič jsme se již vydali správnou cestou a začali ustavičně
-klesat. Nakonec nám již síly ani čas nezbyli na návštěvu pramene Soči, ale
-viděli jsme alespoň za posledního šera ?????. Do kempu kus před obcí Trenta jsme
-dorazili až před desátou, tedy za tmy, naštěstí poslední etapa cesty byla úplně
-nenáročná, jen jsme potkali strážce parku, který nás informoval o blízkosti
-kempu. Kemp stál 10 € na osobu, včetně jednoho žetonu na sprchu. Za první den
-jsme urazili přes dvacet kilometrů.
+klesat. Nakonec nám již síly ani čas nezbyly na návštěvu pramene Soči, ale
+viděli jsme alespoň za posledního šera koryto potoka Mlynarica, který vytéká z
+mezi skal. Do kempu kus před obcí Trenta jsme dorazili až před desátou, tedy za
+tmy, naštěstí poslední etapa cesty byla úplně nenáročná, jen jsme potkali
+strážce parku, který nás informoval o blízkosti kempu. Kemp stál 10 € na osobu,
+včetně jednoho žetonu na sprchu. Za první den jsme urazili přes dvacet
+kilometrů.
 
 ## Pátek: stoupáme k jezerům
 
@@ -67,7 +68,7 @@ obce Trenta, kde jsme se informovali na aktuální situaci na cestě a na časy,
 které má cesta přes hory asi tak trvat, prví úsek měl mít tři a půl hodiny,
 další jednu a půl, tradičně jsme počítali s rezervou a dobře jsme udělali.
 
-Z Trenty jsme již stoupali k vrcholů, naším prvním cílem byla Zasavska koča na
+Z Trenty jsme již stoupali k vrcholům, naším prvním cílem byla Zasavska koča na
 Prehodavcih, tedy horská chata ležící ve výšce 2071 m n. m., která byla zároveň
 nejvyšším bodem naší trasy (Trenta leží ve výšce něco přes 600 m n. m., takže
 nás čekalo nějakých 1400 metrů stoupání). Cesta vedla nejprve lesem, s několika
@@ -81,7 +82,7 @@ jakoby na široké vápencové zídce, nebo alespoň z jedná strany takto vyztu
 Horní etapa cesty, vesměs mezi skálami a klečemi, byla poměrně náročná, přeci
 jen jsme táhli docela dost nákladu na zádech a převýšení nebylo malé. Nicméně
 úspěšně jsme vylezli k chatě, která již byla tak vysoko, že ani kleče tu
-nerostli. Od chaty byl nádherný rozhled, jak zpět na cestu, kterou jsme přišli,
+nerostly. Od chaty byl nádherný rozhled, jak zpět na cestu, kterou jsme přišli,
 tak například i na horu Triglav, která dala své jméno celému národnímu parku.
 Vrchol Triglavu však byl téměř trvale schován v mracích.  Kus od chaty bylo také
 několik jezírek, nad jedním z nich dokonce zbytky sněhu.
@@ -120,22 +121,22 @@ ještě několik pohledů než jsme vystoupali k místu, kde se před námi otev
 krajina a správně jsme odhadli, že by tu mohl být dobrý výhled. A skutečně, když
 jsme udělali pár kroků z cesty ocitli jsme se na okraji několikasetmetrového
 srázu z něhož bylo vidět Bohinjské jezero a co víc, přímo pod námi byl vodopád
-Savica, jeden z cílů naší cesty. Vidět Bohinjské jezero a Savičský vodopád z
+Savica, jeden z cílů naší cesty. Vidět Bohinjské jezero a vodopád Savica z
 tohoto pohledu určitě stojí za to, je to výrazně zajímavější než být u vodopádu
 samotného. Jelikož jsme byli udeřeni výhledem a času jsme měli dost rozhodli
 jsme se tu udělat pauzu a rozhlížet se, výhled byl skutečně úžasný, člověk si
 jen musel dávat pozor na sráz, spadnout tady dolů by znamenalo pěkně dlouho se
 proletět.
 
-Když jsme se dostatečně vynadívali pokračovali jsme dále po naší cestě, ta nyní
+Když jsme se dostatečně vynadívali, pokračovali jsme dále po naší cestě, ta nyní
 vedla opět lesem, byla již poměrně pohodná a vesměs klesala. Viděli jsme i
 několik jeskyní a závrtů, jednu z nich jsme navštívili.
 
-Po sestupu jsme zjistili, že za vstup k Savičskému vodopádu odspodu se platí,
+Po sestupu jsme zjistili, že za vstup k vodopádu Savica odspodu se platí,
 což nás zrovna nepotěšilo (vstup byl 2,1 € pro studenta, tuším 2,5 € plná cena),
 nicméně nakonec jsme se rozhodli k vodopádu se podívat, v prodejně lístků nám
 alespoň dovolili nechat batohy. Na rozdíl od zbytku cesty, kde jsme moc lidí
-nepotkávali zde bylo doslova přeplněno. Všude samí turiské, ovšem dost jiného
+nepotkávali zde bylo doslova přeplněno. Všude samí turisté, ovšem dost jiného
 typu než my tři, takže jsme jich cestou nahoru k vodopádu docela dost předběhli
 jak lehcí jsme si připadali bez batohu. Na focení samotného vodopádu se stála
 fronta a musím říct, že není až tak extra působivý, pohled z vrchu zpoza kamene
