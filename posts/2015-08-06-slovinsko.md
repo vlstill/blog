@@ -10,9 +10,9 @@ short: Minulý týden jsem si vyzkoušel, jaké to je jen s pomocí vlastních n
 
 Naše cesta měla původně začít již v pondělí, ale předpověď počasí vypadala dost
 nepříjemně, proto jsme se rozhodli nakonec odjezd odložit na středu.  Vyrazili
-jsme tedy směrem Kranjska Gora, někde za tímto severoslovinským městem se měl
+jsme tedy ve středu směrem Kranjska Gora, někde za tímto severoslovinským městem se měl
 nacházet kemp, kde jsme chtěli přenocovat. Cestou jsme si ještě užili na
-Rakousko -- Slovinských hranicích pěkné serpentiny a stoupání i klesání. Náš
+rakousko-slovinských hranicích pěkné serpentiny a stoupání i klesání. Náš
 první pokus o nalezení kempu byl neúspěšný, na místě kde OpenStreeMaps
 tvrdošíjně ukazovaly kemp, jsme našli pětihvězdičkový honosný hotel a v něm
 ochotnou recepční, která nám oznámila, že kemp tu bohužel již tak deset let
@@ -24,14 +24,14 @@ příjezdu a postavení stanu začalo pršet.
 ## Čtvrtek: přechod Vršiče
 
 Druhý den jsme si přispali, protože předpověď počasí na dopoledne nebyla zrovna
-nejpříznivější zatímco odpoledne mělo být o poznání lepší. Také poslední
+nejpříznivější, zatímco odpoledne mělo být o poznání lepší. Také poslední
 příprava krosen nám zabrala docela dost času, takže jsme se na cestu vydali až
 po poledni. Auto jsme nakonec nechali na parkovišti před infocentrem v Kranjské
 Goře, jak nám tam bylo doporučeno. Tamtéž jsme byli důrazně upozorněni, že
 nemáme přespávat mimo kempy a horské chaty, v národním parku je to zakázané,
 jsou za to vysoké pokuty a prý je to i nebezpečné -- naštěstí jsme s tím
 počítali předem, jen jsme doufali, že by se třeba dalo ušetřit přespáváním u
-horské chaty, namísto na ní.
+horské chaty namísto na ní.
 
 Po návštěvě infocentra jsme již nasadili batohy a vydali se k našemu prvnímu
 cíli, průsmyku pod horou Vršič. Vrcholky byly stále v mracích, ale doufali jsme,
@@ -57,7 +57,7 @@ klesat. Nakonec nám již síly ani čas nezbyly na návštěvu pramene Soči, a
 viděli jsme alespoň za posledního šera koryto potoka Mlynarica, který vytéká z
 mezi skal. Do kempu kus před obcí Trenta jsme dorazili až před desátou, tedy za
 tmy, naštěstí poslední etapa cesty byla úplně nenáročná, jen jsme potkali
-strážce parku, který nás informoval o blízkosti kempu. Kemp stál 10 € na osobu,
+strážce parku, který nás informoval o blízkosti kempu. Kemp stál 10 € na osobu
 včetně jednoho žetonu na sprchu. Za první den jsme urazili přes dvacet
 kilometrů.
 
@@ -65,25 +65,25 @@ kilometrů.
 
 V pátek jsme vstávali kolem osmé hodiny a po snídani jsme se vydali směrem do
 obce Trenta, kde jsme se informovali na aktuální situaci na cestě a na časy,
-které má cesta přes hory asi tak trvat, prví úsek měl mít tři a půl hodiny,
+které má cesta přes hory asi tak trvat. První úsek měl mít čtyři a půl hodiny,
 další jednu a půl, tradičně jsme počítali s rezervou a dobře jsme udělali.
 
 Z Trenty jsme již stoupali k vrcholům, naším prvním cílem byla Zasavska koča na
 Prehodavcih, tedy horská chata ležící ve výšce 2071 m n. m., která byla zároveň
 nejvyšším bodem naší trasy (Trenta leží ve výšce něco přes 600 m n. m., takže
-nás čekalo nějakých 1400 metrů stoupání). Cesta vedla nejprve lesem, s několika
+nás čekalo nějakých 1400 metrů stoupání). Cesta vedla nejprve lesem s několika
 prudkými úseky, často tu byla neznačená rozcestí na nichž obě cesty vedly ke
 stejnému spojení o něco výše, člověk si mohl jen vybrat jestli chce stoupat
-serpentinami, nebo přímo. Později vystoupala cesta do horského údolí kde již
+serpentinami, nebo přímo. Později vystoupala cesta do horského údolí, kde již
 bylo stromů méně a rozevřeli se nám nádherné rozhledy.  Pokračovali jsme však
 stále výše, stromů postupně ubývalo a cesta začala být na mnoha místech vedená
-jakoby na široké vápencové zídce, nebo alespoň z jedná strany takto vyztužená.
+jakoby na široké vápencové zídce, nebo alespoň z jedné strany takto vyztužená.
 
 Horní etapa cesty, vesměs mezi skálami a klečemi, byla poměrně náročná, přeci
 jen jsme táhli docela dost nákladu na zádech a převýšení nebylo malé. Nicméně
 úspěšně jsme vylezli k chatě, která již byla tak vysoko, že ani kleče tu
 nerostly. Od chaty byl nádherný rozhled, jak zpět na cestu, kterou jsme přišli,
-tak například i na horu Triglav, která dala své jméno celému národnímu parku.
+tak například i na horu Triglav (2864 m n. m.), která dala své jméno celému národnímu parku.
 Vrchol Triglavu však byl téměř trvale schován v mracích.  Kus od chaty bylo také
 několik jezírek, nad jedním z nich dokonce zbytky sněhu.
 
@@ -97,33 +97,33 @@ odsud měl dát zdolat za pět hodin a u cesty byl vykřičník, který pravděp
 znamená, že člověk potřebuje zajištění.
 
 Naše cesta ale vedla klidně kolem několika jezer a jelikož již bylo odpoledne a
-lehce pod mrakem tak se nám poštěstilo vidět několik svišťů, některé i docela
+lehce pod mrakem, tak se nám poštěstilo vidět několik svišťů, některé i docela
 zblízka a dokonce dva kamzíky, kteří se popásali na suťovém poli. K chatě jsme
 dorazili před osmou hodinou, zhrozili se místních cen (chata vyšla na jednoho
 asi na 21 €, a to za úplně nejlevnější přespání v místnosti pro osm lidí a bez
 deky), nicméně zůstali jsme tu, nebyla ani jiná možnost.
 
-Jelikož nikdo z nás už neměl po těch asi dvaceti kilometrech moc chuť něco dělat
-tak jsme se najedli a šli spát.
+Jelikož nikdo z nás už neměl po těch asi dvaceti kilometrech moc chuť něco
+dělat, tak jsme se najedli a šli spát.
 
 ## Sobota: a opět klesáme
 
-Sobotní tůra byla kratší, přeci jen nejsme až tak trénovaní. Od chaty jsme se
+Sobotní tůra byla o trochu kratší, přeci jen nejsme až tak trénovaní. Od chaty jsme se
 tedy vydali nejprve kolem jezer, která leží přímo pod ní -- je to vlastně buď
 jedno jezero, nebo dvě až tři podle toho kolik je vody. Dále jsme klesali směrem
 k Črnému jezeru, cesta byla povětšinou lesem a místy klesala docela dost, ale
-stále to byla normální turistická cesta (cestám, které vyžadují zajištění jsme
+stále to byla normální turistická cesta (cestám, které vyžadují zajištění, jsme
 se vyhýbali). U Črného jezera jsme se občerstvili na kamenech a pozorovali
 drobné ryby, ve výše položených jezerech jsme žádné neviděli.
 
 Od jezera jsme pak stoupali poměrně rychle zase nahoru, naskytlo se nám na něj
-ještě několik pohledů než jsme vystoupali k místu, kde se před námi otevírala
+ještě několik pohledů, než jsme vystoupali k místu, kde se před námi otevírala
 krajina a správně jsme odhadli, že by tu mohl být dobrý výhled. A skutečně, když
-jsme udělali pár kroků z cesty ocitli jsme se na okraji několikasetmetrového
-srázu z něhož bylo vidět Bohinjské jezero a co víc, přímo pod námi byl vodopád
+jsme udělali pár kroků z cesty, ocitli jsme se na okraji několikasetmetrového
+srázu, z něhož bylo vidět Bohinjské jezero, a co víc, přímo pod námi byl vodopád
 Savica, jeden z cílů naší cesty. Vidět Bohinjské jezero a vodopád Savica z
-tohoto pohledu určitě stojí za to, je to výrazně zajímavější než být u vodopádu
-samotného. Jelikož jsme byli udeřeni výhledem a času jsme měli dost rozhodli
+tohoto pohledu určitě stojí za to, je to výrazně zajímavější, než být u vodopádu
+samotného. Jelikož jsme byli uneseni výhledem a času jsme měli dost, rozhodli
 jsme se tu udělat pauzu a rozhlížet se, výhled byl skutečně úžasný, člověk si
 jen musel dávat pozor na sráz, spadnout tady dolů by znamenalo pěkně dlouho se
 proletět.
@@ -136,12 +136,12 @@ Po sestupu jsme zjistili, že za vstup k vodopádu Savica odspodu se platí,
 což nás zrovna nepotěšilo (vstup byl 2,1 € pro studenta, tuším 2,5 € plná cena),
 nicméně nakonec jsme se rozhodli k vodopádu se podívat, v prodejně lístků nám
 alespoň dovolili nechat batohy. Na rozdíl od zbytku cesty, kde jsme moc lidí
-nepotkávali zde bylo doslova přeplněno. Všude samí turisté, ovšem dost jiného
-typu než my tři, takže jsme jich cestou nahoru k vodopádu docela dost předběhli
+nepotkávali, zde bylo doslova přeplněno. Všude samí turisté, ovšem dost jiného
+typu než my tři, takže jsme jich cestou nahoru k vodopádu docela dost předběhli,
 jak lehcí jsme si připadali bez batohu. Na focení samotného vodopádu se stála
 fronta a musím říct, že není až tak extra působivý, pohled z vrchu zpoza kamene
-na okraji srázu na mě působil mnohem zajímavěji. Ale zase jsme viděli i ten sráz
-nad kterým jsme před tím byli.
+na okraji srázu na mě působil mnohem zajímavěji. Ale zase jsme viděli i ten
+sráz, nad kterým jsme před tím byli.
 
 Od vodopádu jsme pokračovali již vcelku mírným klesáním k Bohinjskému jezeru,
 nejprve po silnici, potom lesní cestou a nakonec přes vesnici Ukanc. V kempu
