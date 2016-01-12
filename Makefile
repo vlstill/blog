@@ -6,7 +6,7 @@ build : site
 	./site build
 
 site : site.hs blog.cabal .cabal-sandbox
-	cabal install
+	cabal install --force-reinstalls
 	touch site
 
 rebuild : site
