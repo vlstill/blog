@@ -1,5 +1,5 @@
-I am masters student at Faculty of Informatics, Masaryk University in Brno,
-Czech Republic. I also work on [DIVINE](https://divine.fi.muni.cz/) model
+I am Ph.D. student at Faculty of Informatics, Masaryk University in Brno,
+Czech Republic. I work on [DIVINE](https://divine.fi.muni.cz/) model
 checker in [ParaDiSe laboratory](https://paradise.fi.muni.cz/) under the
 supervision of [doc. RNDr. Jiří Barnat, Ph.D.](https://www.fi.muni.cz/~xbarnat/)
 Furthermore, I teach several courses and exercises at the faculty and I am
@@ -27,7 +27,7 @@ On this website you will find links to my projects and my personal blog
     course together with Martin Ukrop.
 *   [PB173 Domain specific development in C/C++](https://is.muni.cz/predmet/fi/jaro2016/PB173?lang=en)
     ([IS](https://is.muni.cz/auth/predmet/fi/jaro2016/PB173)):
-    I teach group about modern C++ together with Jiří Weiser.
+    I teach group about modern C++ together with Jiří Weiser and Nikola Beneš.
 *   [IB015 Non-Imperative Programming](https://is.muni.cz/predmet/fi/podzim2015/IB015?lang=en)
     ([IS](https://is.muni.cz/auth/predmet/fi/podzim2015/IB015)):
     I teach several seminar groups.
