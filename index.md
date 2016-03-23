@@ -1,4 +1,4 @@
-I am Ph.D. student at Faculty of Informatics, Masaryk University in Brno,
+I am a Ph.D. student at Faculty of Informatics, Masaryk University in Brno,
 Czech Republic. I work on [DIVINE](https://divine.fi.muni.cz/) model
 checker in [ParaDiSe laboratory](https://paradise.fi.muni.cz/) under the
 supervision of [Jiří Barnat](https://www.fi.muni.cz/~xbarnat/)
