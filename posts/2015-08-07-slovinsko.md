@@ -1,11 +1,11 @@
 ---
-title: Slovinsko: putování po Julských Alpách
-tags: Slovinsko, Alpy, hory, cestování, foto
-short: Minulý týden jsem si vyzkoušel, jaké to je jen s pomocí vlastních nohou
+title: "Slovinsko: putování po Julských Alpách"
+tags: "Slovinsko, Alpy, hory, cestování, foto"
+short: "Minulý týden jsem si vyzkoušel, jaké to je jen s pomocí vlastních nohou
        objevovat krásy hor a s krosnou na zádech se dostat do míst, kde neproudí
        davy turistů. S Karlem a Evou jsme totiž vyrazili do Triglavského
        národního parku ve Slovinských Julských Alpách, kde jsme podnikli
-       třídenní přechod těchto krásných hor.
+       třídenní přechod těchto krásných hor."
 ---
 
 Naše cesta měla původně začít již v pondělí, ale předpověď počasí vypadala dost

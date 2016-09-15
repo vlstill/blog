@@ -8,8 +8,10 @@ import           Data.Monoid
 import           Data.Maybe
 import           Data.Ord
 import           Data.Char
-import qualified Data.Map as M
+import qualified Data.HashMap.Lazy as M
 import           Data.List
+import qualified Data.Aeson.Types as A
+import qualified Data.Text as T
 
 import           Data.Time.Clock
 import           Data.Time.Calendar
@@ -151,7 +153,11 @@ feedCtx tags = desc <> postCtxBase' tags
   where
     desc = field "description" $ \item -> do
         metadata <- getMetadata (itemIdentifier item)
-        return $ fromMaybe "" $ M.lookup "short" metadata
+        return . fromMaybe "" $ mToStr =<< M.lookup "short" metadata
+
+mToStr :: A.Value -> Maybe String
+mToStr (A.String x) = Just (T.unpack x)
+mToStr _ = Nothing
 
 postCtxBase' :: Tags -> Context String
 postCtxBase' tags =
@@ -163,7 +169,7 @@ postCtxBase' tags =
     extractFirstSentence :: Item String -> Compiler String
     extractFirstSentence item = do
         meta <- getMetadata (itemIdentifier item)
-        return $ maybe "" (takeWhile (/= '.') >>> (++ "…")) $ M.lookup "short" meta
+        return $ maybe "" (takeWhile (/= '.') >>> (++ "…")) $ mToStr =<< M.lookup "short" meta
 
 postCtx :: Tags -> [Item ByteString] -> [ImgMeta] -> Context String
 postCtx tags imgs imgmeta = listField "images" imgCtx (return imgs) <>
@@ -235,7 +241,6 @@ feedConfig = FeedConfiguration
 ident :: String -> String
 ident = map (\x -> fromMaybe x (x `M.lookup` tr)) . map toLower
   where
-    tr :: M.Map Char Char
     tr = M.fromList
         [ (' ', '-'), ('\n', '-'), ('*', '-'), ('\t', '-')
         , ('ě', 'e'), ('š', 's'), ('č', 'c'), ('ř', 'r'), ('ž', 'z')
