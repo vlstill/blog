@@ -49,7 +49,7 @@ main = hakyll $ do
     match "images/*/*.*" $ do
         route   idRoute
         compile $ getResourceLBS
-            >>= withItemBody (unixFilterLBS "convert" [ "-", "-strip", "-resize", "1800x1800", "-quality", "94", "-" ])
+            >>= withItemBody (unixFilterLBS "convert" [ "-", "-strip", "-resize", "3000x3000", "-quality", "94", "-" ])
 
     match "images/*/*.*" $ version "small" $ do
         route $ mapRoute (splitExtension >>> \(name, ext) -> (name ++ "-small") <.> ext)
