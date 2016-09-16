@@ -12,6 +12,7 @@ import qualified Data.HashMap.Lazy as M
 import           Data.List
 import qualified Data.Aeson.Types as A
 import qualified Data.Text as T
+import qualified Data.ByteString.Lazy.Char8 as BS
 
 import           Data.Time.Clock
 import           Data.Time.Calendar
@@ -25,6 +26,7 @@ import           Data.ByteString.Lazy ( ByteString )
 
 import           System.IO.Unsafe ( unsafePerformIO )
 import           System.FilePath
+import           System.Process ( system )
 
 import           Control.Monad
 import           Control.Applicative
@@ -36,6 +38,10 @@ import           Hakyll
 
 
 --------------------------------------------------------------------------------
+
+dbg :: Show a => a -> a
+dbg x = unsafePerformIO (print x) `seq` x
+
 main :: IO ()
 main = hakyll $ do
     match "images/*/meta" $ compile imgMetaCompiler
@@ -91,10 +97,13 @@ main = hakyll $ do
         compile $ do
             path <- toFilePath <$> getUnderlying
             let
-                imgbase = ("images" </>) . takeBaseName $ path
+                basename = dropExtension $ takeFileName path
+                imgbase = "images" </> basename
                 imgpat = fromGlob . (</> "*.*") $ imgbase
                 metapat = fromList . (: []) . fromFilePath . (</> "meta") $ imgbase
             imgs <- sortBy (comparing (toFilePath . itemIdentifier)) <$> loadAll (imgpat .&&. hasNoVersion)
+            unsafeCompiler $ system (unwords ["cd _site/images && zip -r ", addExtension basename "zip", basename, "-x '*-small.*'"])
+
             meta <- fromMaybe [] . fmap itemBody . head' <$> loadAllSnapshots metapat "metamap"
 
             let ctx = postCtx tags imgs meta
@@ -171,10 +180,17 @@ postCtxBase' tags =
         meta <- getMetadata (itemIdentifier item)
         return $ maybe "" (takeWhile (/= '.') >>> (++ "…")) $ mToStr =<< M.lookup "short" meta
 
+imgToZip :: Identifier -> FilePath
+imgToZip = flip addExtension "zip" . takeDirectory . toFilePath
+
 postCtx :: Tags -> [Item ByteString] -> [ImgMeta] -> Context String
-postCtx tags imgs imgmeta = listField "images" imgCtx (return imgs) <>
-                            postCtxBase' tags
+postCtx tags imgs imgmeta = if null imgs then base
+                                         else constField "imageszip" imageszip <> base
   where
+    base = listField "images" imgCtx (return imgs) <>
+           postCtxBase' tags
+    imageszip :: FilePath
+    imageszip = (".." </>) . imgToZip . itemIdentifier $ head imgs
     imgCtx = urlField "url" <>
              field "smallUrl" getSmallUrl <>
              field "alt" getAlt
